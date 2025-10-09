@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamrava - Social Media Management & Digital Branding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F5F5F5;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #5A189A 0%, #C77DFF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #5A189A 0%, #C77DFF 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(90, 24, 154, 0.1), 0 10px 10px -5px rgba(90, 24, 154, 0.04);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 15px -3px rgba(90, 24, 154, 0.1), 0 4px 6px -2px rgba(90, 24, 154, 0.05);
+        }
+        
+        .nav-link:hover {
+            color: #C77DFF;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+
+        #case-study-modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3">
+                <span class="text-xl font-bold gradient-text">Hamrava</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Home</a>
+                <a href="#about" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">About</a>
+                <a href="#services" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Services</a>
+                <a href="#portfolio" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Portfolio</a>
+                <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Contact</a>
+            </nav>
+            
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white w-full px-4 pb-4">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-purple-800">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-purple-800">About</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-purple-800">Services</a>
+            <a href="#portfolio" class="block py-2 text-gray-700 hover:text-purple-800">Portfolio</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-purple-800">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Shape Your Digital Aura</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Boutique social media management and digital branding that makes your presence unforgettable.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-white text-purple-900 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300">Our Services</a>
+                <a href="#contact" class="border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-purple-900 transition duration-300">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">About Hamrava</h2>
+                <div class="space-y-6 text-gray-700">
+                    <p>At Hamrava, we don't just manage your social media — we elevate your brand's presence with purpose, precision, and a touch of elegance. We are a boutique social media and digital branding studio, born from the idea that every brand deserves a voice that resonates, a look that inspires, and a strategy that delivers.</p>
+                    <p>From bold visuals to refined storytelling, our mission is simple: to make your brand unforgettable in the digital space. With a focus on Instagram and other leading platforms, we partner with both emerging and established brands — helping them grow with grace, connect with meaning, and sell with style.</p>
+                    <p>Whether you're launching your first brand or reinventing your presence, Hamrava is here to walk with you, every step of the way.</p>
+                    <p class="text-xl font-semibold text-center mt-8 gradient-text">Hamrava - Shape Your Digital Aura</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">Our Services</h2>
+            <p class="text-xl text-center mb-12 max-w-2xl mx-auto text-gray-600">Tailored solutions to elevate your social media presence</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-palette text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Social Media Graphic Design</h3>
+                    <p class="text-gray-600 mb-4">Custom-designed graphics that align with your brand identity and captivate your audience across all platforms.</p>
+                    
+                    <div class="mb-6 flex justify-center">
+                        <img src="images/hamrava_graphic_design.jpg" alt="hamrava graphic design" class="w-full h-full object-cover">
+                        
+                    </div>
+                    
+                    <div class="testimonial-card bg-purple-50 rounded-lg p-4">
+                        <p class="text-gray-700 italic mb-2">"Hamrava transformed our Instagram with stunning visuals that perfectly captured our brand essence."</p>
+                        <p class="text-sm font-medium text-purple-800">— Sarah J., Lifestyle Brand</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-images text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Instagram Story Templates</h3>
+                    <p class="text-gray-600 mb-4">Customizable templates that maintain brand consistency while allowing for fresh, engaging content daily.</p>
+                    
+                    <div class="mb-6 flex justify-center">
+                        <img src="images/story_design.jpg" alt="layout and grid design" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="testimonial-card bg-purple-50 rounded-lg p-4">
+                        <p class="text-gray-700 italic mb-2">"Our engagement skyrocketed after implementing Hamrava's story templates. They're both beautiful and effective!"</p>
+                        <p class="text-sm font-medium text-purple-800">— Michael T., E-commerce</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-icons text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Highlight Covers & Branded Icons</h3>
+                    <p class="text-gray-600 mb-4">Cohesive highlight covers and icons that create a polished, professional look for your Instagram profile.</p>
+                    
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <div class="bg-gray-200 rounded-full w-24 h-24">
+                            <img src="images/highlight1.jpg" alt="layout and grid design" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-full w-24 h-24">
+                            <img src="images/highlight2.jpg" alt="layout and grid design" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-full w-24 h-24">
+                            <img src="images/highlight3.jpg" alt="layout and grid design" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-full w-24 h-24">
+                            <img src="images/highlight4.jpg" alt="layout and grid design" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-full w-24 h-24">
+                            <img src="images/highlight5.jpg" alt="layout and grid design" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-full w-24 h-24">
+                            <img src="images/highlight6.jpg" alt="layout and grid design" class="w-full h-full object-cover rounded-full">
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card bg-purple-50 rounded-lg p-4">
+                        <p class="text-gray-700 italic mb-2">"The highlight covers gave our profile such a premium look. Clients mention them all the time!"</p>
+                        <p class="text-sm font-medium text-purple-800">— Aisha K., Consultant</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-th-large text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Post Layouts & Grid Design</h3>
+                    <p class="text-gray-600 mb-4">Strategic post layouts that create a visually stunning Instagram grid that tells your brand story.</p>
+                    
+                    <div class="mb-6 flex justify-center">
+                        <img src="images/layout.jpg" alt="layout and grid design" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="testimonial-card bg-purple-50 rounded-lg p-4">
+                        <p class="text-gray-700 italic mb-2">"Our grid went from random to remarkable. The layout system makes planning content so much easier."</p>
+                        <p class="text-sm font-medium text-purple-800">— David L., Restaurant Owner</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Content Calendar</h3>
+                    <p class="text-gray-600 mb-4">Strategic planning of your content mix with optimal posting times and themes to maximize engagement.</p>
+                    
+                    <div class="mb-6 flex justify-center">
+                        <img src="images/content_calender.jpg" alt="layout and grid design" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="testimonial-card bg-purple-50 rounded-lg p-4">
+                        <p class="text-gray-700 italic mb-2">"The content calendar brought structure to our social media and helped us post consistently."</p>
+                        <p class="text-sm font-medium text-purple-800">— Emily R., Beauty Brand</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-pen-fancy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Brand Identity Package</h3>
+                    <p class="text-gray-600 mb-4">Complete visual identity system including color palette, typography, and design elements for cohesive branding.</p>
+                    
+                    <div class="mb-6 flex justify-center">
+                        <img src="images/hamrava_brand_identity.jpg" alt="hamrava brand identity package" class="w-full h-full object-cover">
+                        
+                    </div>
+                    
+                    <div class="testimonial-card bg-purple-50 rounded-lg p-4">
+                        <p class="text-gray-700 italic mb-2">"Our brand identity package gave us the professional look we needed to compete in our market."</p>
+                        <p class="text-sm font-medium text-purple-800">— Carlos M., Startup Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">Our Portfolio</h2>
+            <p class="text-xl text-center mb-12 max-w-2xl mx-auto text-gray-600">A glimpse of our recent work across various industries</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <div class="bg-gray-200 h-64 w-full">
+                        <img src="uwana/uwana_main.jpg" alt="Uwana Solar Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 gradient-bg bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300 p-6">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Uwana – Solar Media Design</h3>
+                            <p class="mb-4">Boosting Uwana’s solar brand with clean, impactful social media visuals.</p>
+                
+                            <button class="view-case-study bg-white text-purple-900 text-sm font-bold px-4 py-2 rounded-full inline-block" 
+                                data-title="Uwana – Solar Media Design" 
+                                data-content="We partnered with Uwana, a forward-thinking solar energy company, to elevate their brand presence across digital platforms.<br><br>
+                                Our work included:<br><br>
+                                Designing a fresh, eco-inspired visual identity to reflect their mission.<br><br>
+                                Creating engaging social media graphics, promotional banners, and product-focused infographics.<br><br>
+                                Developing custom post templates for consistent branding on all channels.<br><br>
+                                Optimizing their visual strategy to attract residential and commercial clients.<br><br>
+                                This collaboration helped Uwana achieve a professional, modern, and recognizable online image, positioning them as a trusted leader in the renewable energy market."
+                                data-images="uwana/uwana1.jpg,uwana/uwana2.jpg,uwana/uwana3.jpg,uwana/uwana4.jpg,uwana/uwana5.jpg,uwana/uwana6.jpg,uwana/uwana7.jpg,uwana/uwana8.jpg,uwana/uwana9.jpg,uwana/uwana10.jpg,uwana/uwana11.jpg,uwana/uwana12.jpg,uwana/uwana13.jpg,uwana/uwana14.jpg">
+                                View Case Study
+                            </button>
+                
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <div class="bg-gray-200 h-64 w-full">
+                        <img src="frosty_cream/frosty_main.jpg" alt="Uwana Solar Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 gradient-bg bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300 p-6">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Frasty Cream – Dessert Brand Design</h3>
+                            <p class="mb-4">Sweetening Frasty Cream’s image with playful, mouth-watering social media visuals.</p>
+                            <button class="view-case-study bg-white text-purple-900 text-sm font-bold px-4 py-2 rounded-full inline-block" 
+                                    data-title="Frasty Cream – Dessert Brand Design" 
+                                    data-content="We teamed up with Frasty Cream, a boutique ice cream and dessert shop, to give their brand a fresh, deliciously inviting digital identity.<br> <br>
+
+                                    Our work included :<br> <br>
+                                    
+                                    Designing colorful, appetizing visuals for social media campaigns.<br> <br>
+                                    
+                                    Creating seasonal promotion banners and product-focused illustrations.<br> <br>
+                                    
+                                    Developing custom templates for Instagram stories, posts, and reels.<br> <br>
+                                    
+                                    Crafting a playful, consistent visual language that matches the shop’s warm and fun atmosphere.<br> <br>
+                                    
+                                    This collaboration helped Frasty Cream attract new customers, increase online engagement, and stand out as a go-to destination for sweet treats in their community."
+
+                                    data-images="frosty_cream/frosty1.jpg,frosty_cream/frosty2.jpg,frosty_cream/frosty3.jpg">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <div class="bg-gray-200 h-64 w-full">
+                        <img src="tofam_reality/tofam_main.jpg" alt="Uwana Solar Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 gradient-bg bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300 p-6">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Tofam Realty – Real Estate Media Design</h3>
+                            <p class="mb-4">Elevating Tofam Realty’s brand with elegant, trust-building digital visuals.</p>
+                            <button class="view-case-study bg-white text-purple-900 text-sm font-bold px-4 py-2 rounded-full inline-block" 
+                                    data-title="Consulting Firm" 
+                                    data-content="We collaborated with Tofam Realty, a dynamic real estate agency, to create a polished and trustworthy digital presence that reflects their expertise in the property market.<br> <br>
+
+                                    Our work included :<br> <br>
+                                    
+                                    Designing clean, professional social media graphics for property listings and promotions.<br> <br>
+                                    
+                                    Creating branded templates for Instagram, Facebook, and LinkedIn posts.<br> <br>
+                                    
+                                    Developing high-impact visuals for featured properties, market updates, and client testimonials.<br> <br>
+                                    
+                                    Ensuring the brand identity communicates trust, professionalism, and local market knowledge.<br> <br>
+                                    
+                                    This project helped Tofam Realty strengthen their online credibility, attract new leads, and maintain consistent, professional branding across all digital channels."
+
+                                    data-images="tofam_reality/tofam1.jpg,tofam_reality/tofam2.jpg,tofam_reality/tofam3.jpg,tofam_reality/tofam4.jpg,tofam_reality/tofam5.jpg">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <div class="bg-gray-200 h-64 w-full">
+                        <img src="farouj al shams/farouj_main.jpg" alt="Uwana Solar Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 gradient-bg bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300 p-6">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Farouj Al Shams – Instagram Branding</h3>
+                            <p class="mb-4">Revamping Farouj Al Shams’ Instagram with vibrant, appetizing story templates and posts.</p>
+                            <button class="view-case-study bg-white text-purple-900 text-sm font-bold px-4 py-2 rounded-full inline-block" 
+                                    data-title="Farouj Al Shams – Instagram Branding" 
+                                    data-content="We completely redesigned the Instagram presence of Farouj Al Shams, a popular restaurant known for its delicious dishes and warm ambiance.<br> <br>
+
+                                    Our work included :<br> <br>
+                                    
+                                    Creating a cohesive and visually appealing Instagram feed that reflects the restaurant’s brand identity.<br> <br>
+                                    
+                                    Designing a variety of custom Instagram story templates tailored for promotions, daily specials, and customer engagement.<br> <br>
+                                    
+                                    Crafting vibrant post designs featuring mouth-watering food photography and inviting calls to action.<br> <br>
+                                    
+                                    Enhancing follower interaction through consistent, eye-catching visuals and brand storytelling.<br> <br>
+                                    
+                                    The project helped Farouj Al Shams build a stronger connection with their audience, increase online visibility, and boost customer engagement through social media.<br> <br>
+                                    
+                                    Gallery section includes all the story template images designed for the restaurant’s Instagram."
+
+                                    data-images="farouj al shams/farouj1.jpg,farouj al shams/farouj2.jpg,farouj al shams/farouj3.jpg,farouj al shams/farouj4.jpg">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <div class="bg-gray-200 h-64 w-full">
+                        <img src="beauty/beauty_main.jpg" alt="Uwana Solar Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 gradient-bg bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300 p-6">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Toni & Guy Aundh – Beauty Brand Design</h3>
+                            <p class="mb-4">Enhancing Toni & Guy Aundh’s digital presence with stylish posts, stories, and brochures.</p>
+                            <button class="view-case-study bg-white text-purple-900 text-sm font-bold px-4 py-2 rounded-full inline-block" 
+                                    data-title="Toni & Guy Aundh – Beauty Brand Design" 
+                                    data-content="We partnered with Toni & Guy Aundh, a premium beauty salon, to elevate their brand’s professional image across social media and print materials.<br> <br>
+
+                                    Our contributions included :<br> <br>
+                                    
+                                    Designing elegant Instagram posts and story templates that highlight their services and special offers.<br> <br>
+                                    
+                                    Creating a range of sophisticated brochures for in-salon promotions and events.<br> <br>
+                                    
+                                    Developing a cohesive visual identity that reflects the salon’s luxury and style.<br> <br>
+                                    
+                                    Helping the brand’s Instagram page appear polished, engaging, and highly professional.<br> <br>
+                                    
+                                    This project significantly boosted Toni & Guy Aundh’s online reputation, attracting more clients and reinforcing their status as a top-tier beauty destination."
+
+                                    data-images="beauty/beauty1.jpg,beauty/beauty2.jpg,beauty/beauty3.jpg,beauty/beauty4.jpg,beauty/beauty5.jpg">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item relative rounded-xl overflow-hidden">
+                    <div class="bg-gray-200 h-64 w-full">
+                        <img src="jcgets_store/cjget_main.jpg" alt="Uwana Solar Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="portfolio-overlay absolute inset-0 gradient-bg bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300 p-6">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">JCgets Store – Gadget Brand Design</h3>
+                            <p class="mb-4">Designing standout visuals that made JCgets Store’s Instagram shine.</p>
+                            <button class="view-case-study bg-white text-purple-900 text-sm font-bold px-4 py-2 rounded-full inline-block" 
+                                    data-title="JCgets Store – Gadget Brand Design" 
+                                    data-content="We collaborated with JCgets Store, a dynamic gadget retailer specializing in buying and selling various tech products, to enhance their product visuals and social media presence.<br> <br>
+
+                                    Our work included :<br> <br>
+                                    
+                                    Creating eye-catching designs for featured gadgets to highlight their features and benefits.<br> <br>
+                                    
+                                    Designing engaging Instagram posts and stories that boosted follower interaction.<br> <br>
+                                    
+                                    Developing a cohesive visual style tailored to the tech-savvy target audience.<br> <br>
+                                    
+                                    Thanks to our design strategy, JCgets Store’s Instagram profile gained significant attention, increased engagement, and attracted more customers interested in the latest gadgets."
+
+                                    data-images="jcgets_store/cjgets1.jpg,jcgets_store/cjgets2.jpg,jcgets_store/cjgets3.jpg,jcgets_store/cjgets4.jpg,jcgets_store/cjgets5.jpg">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="gradient-bg text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition duration-300 inline-block">Ready to Elevate Your Brand?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">What Our Clients Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gray-200 rounded-full w-20 h-20">
+                            <img src="images/nadia.jpg" alt="nadia" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Sophia R.</h4>
+                            <p class="text-sm text-purple-800">Fashion Brand Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Working with Hamrava transformed our social media from amateur to premium. Our engagement increased by 300% in just three months, and we've attracted collaborations with major brands in our industry."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gray-200 rounded-full w-20 h-20">
+                            <img src="images/james.jpg" alt="James" class="w-full h-full object-cover rounded-full">
+
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">James K.</h4>
+                            <p class="text-sm text-purple-800">CEO, Tech Startup</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Hamrava's branding package gave us the professional image we needed for our Series A funding round. Investors specifically mentioned how strong our visual identity was during pitches."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gray-200 rounded-full w-20 h-20">
+                            <img src="images/sophia.jpg" alt="Sophia" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Nadia P.</h4>
+                            <p class="text-sm text-purple-800">Wellness Coach</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"As a solopreneur, I didn't have time to manage my social media. Hamrava not only made it beautiful but strategic. I've doubled my client base in six months thanks to their content strategy."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">Get In Touch</h2>
+                <p class="text-xl text-center mb-12 max-w-2xl mx-auto text-gray-600">Ready to elevate your brand's digital presence? Let's create something remarkable together.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-gray-800">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <a href="mailto:info@hamrava.com" class="text-purple-800 hover:underline">info@hamrava.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">WhatsApp</h4>
+                                    <a href="https://wa.me/989981384095" class="text-purple-800 hover:underline">+98 998 138 4095</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Based In</h4>
+                                    <p class="text-gray-600">Digital Studio Serving Clients Worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
+                        
+                        <form id="contact-form" class="space-y-4" action="mailto:info@hamrava.com" method="post" enctype="text/plain">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+                                <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition">
+                                    <option value="">Select a service</option>
+                                    <option value="Graphic Design">Social Media Graphic Design</option>
+                                    <option value="Story Templates">Instagram Story Templates</option>
+                                    <option value="Highlight Covers">Highlight Covers & Icons</option>
+                                    <option value="Post Layouts">Post Layouts & Grid Design</option>
+                                    <option value="Content Calendar">Content Calendar</option>
+                                    <option value="Brand Identity">Brand Identity Package</option>
+                                    <option value="Full Management">Full Social Media Management</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="gradient-bg text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3">
+                        <span class="text-xl font-bold gradient-text">Hamrava</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Boutique social media management and digital branding studio helping brands create unforgettable digital presences.</p>
+                    <p class="text-sm text-gray-500">© 2023 Hamrava. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Graphic Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Content Strategy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Brand Identity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Social Media Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>Hamrava - Shape Your Digital Aura</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Modal -->
+    <div id="case-study-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl max-w-4xl w-full mx-4 p-8 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-start mb-6">
+                <h3 id="modal-title" class="text-2xl font-bold gradient-text">Case Study</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <div id="modal-content" class="space-y-4">
+                <p>Detailed case study content would appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Case Study Modal functionality
+        // Case Study Modal functionality
+const modal = document.getElementById('case-study-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalContent = document.getElementById('modal-content');
+const closeModal = document.getElementById('close-modal');
+
+document.querySelectorAll('.view-case-study').forEach(button => {
+    button.addEventListener('click', function() {
+        modalTitle.textContent = this.dataset.title;
+
+        // متن توضیحات پروژه
+        let contentHTML = `<p>${this.dataset.content}</p>`;
+
+        // گالری تصاویر (اگر وجود داشت)
+        if (this.dataset.images) {
+            const images = this.dataset.images.split(',').map(img => img.trim());
+            if (images.length > 0) {
+                const galleryHTML = `
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                        ${images.map(img => `<img src="${img}" class="w-full rounded-lg object-cover" alt="">`).join('')}
+                    </div>
+                `;
+                contentHTML += galleryHTML;
+            }
+        }
+
+        modalContent.innerHTML = contentHTML;
+        modal.classList.remove('hidden');
+    });
+});
+
+// بستن مودال
+closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.add('hidden');
+    }
+});
+
+
+        
+
+        
+
+        // Simple form handling (using mailto as requested)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            // In a real implementation, you might want to validate the form here
+            // or use a service like Formspree for form submissions
+            
+            // This just allows the default mailto behavior
+            return true;
+        });
+    </script>
+</body>
+</html>

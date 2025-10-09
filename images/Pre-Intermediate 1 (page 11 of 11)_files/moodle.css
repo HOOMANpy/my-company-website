@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("[[font:core|fontawesome-webfont.eot]]?v=4.7.0");
+  src: url("[[font:core|fontawesome-webfont.eot]]?#iefix&v=4.7.0") format("embedded-opentype"), url("[[font:core|fontawesome-webfont.woff2]]?v=4.7.0") format("woff2"), url("[[font:core|fontawesome-webfont.woff]]?v=4.7.0") format("woff"), url("[[font:core|fontawesome-webfont.ttf]]?v=4.7.0") format("truetype"), url("[[font:core|fontawesome-webfont.svg]]?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/eot/IRANSansWeb_Light.eot');
+  src: url('fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('fonts/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+a, div, td, th, select, input, textarea, p, h1, t2, h3, h4, h5, h6, strong {
+  font-family: IRANSans !important;
+}
+
+.root_node,
+.navigation_node {
+  margin-left: 0 !important;
+  /* stylelint-disable-line declaration-no-important */
+  padding-left: 0 !important;
+  /* stylelint-disable-line declaration-no-important */ }
+
+.block.block_settings #settingsnav {
+  padding-top: 0 !important;
+  /* stylelint-disable-line declaration-no-important */ }
+
+.qtype_multichoice_clearchoice {
+  display: none;
+}
+
+footer#page-footer {display: none;}
+
+.navbar-bootswatch {
+  background-color: #fff;
+}
+
+.questionflagtext, .questionflagimage, .que .info .grade, .que .info .state {
+  display: none !important;
+}
+
+#goto-top-link a {
+  left: unset !important;
+  right: 0 !important;
+}
+
+
+.que {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.info {
+  direction: rtl !important;
+  text-align: right;
+}
+
+.block_myoverview [data-region="filter"] {
+  display: none !important;
+}
+
+.vjs-playback-rate {
+  display:none !important;
+}
+
+.submitbtns form[action$="/mod/quiz/processattempt.php"] button {
+  background-color: red !important;
+  color: #fff;
+  font-weight: bold;
+}
+.block .block-cards .card .coursemenubtn
+{
+   display: none;
+}
+a[data-title="profile,moodle"] {
+  display: none;
+}
