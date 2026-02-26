@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Hamrava Social Media & Branding Studio</title>
+    <meta name="description" content="Get in touch with Hamrava. Ready to elevate your brand's digital presence? Let's create something remarkable together." />
+    <link rel="icon" type="image/x-icon" href="images/hamrava_logo.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+        
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #5a189a 0%, #c77dff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #5a189a 0%, #c77dff 100%);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(90, 24, 154, 0.2);
+        }
+
+        @keyframes blob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-blob {
+            animation: blob 15s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- ==================== HEADER ==================== -->
+    <!-- ==================== HEADER نهایی برای همه صفحات ==================== -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- لوگو -->
+        <div class="flex items-center">
+            <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+            <a href="index.html" class="text-xl font-bold gradient-text">Hamrava</a>
+        </div>
+
+        <!-- منوی دسکتاپ - با تمام لینک‌ها -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Home</a>
+            <a href="about.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">About</a>
+            <a href="services.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Services</a>
+            <a href="portfolio.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Portfolio</a>
+            <a href="pricing.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Pricing</a>
+            <a href="blog/index.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Blog</a>
+            <a href="book.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Book a Call</a>
+            <a href="contact.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Contact</a>
+        </nav>
+
+        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- منوی موبایل - با تمام لینک‌ها -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white w-full px-4 pb-4 shadow-lg">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-800">Home</a>
+        <a href="about.html" class="block py-2 text-gray-700 hover:text-purple-800">About</a>
+        <a href="services.html" class="block py-2 text-gray-700 hover:text-purple-800">Services</a>
+        <a href="portfolio.html" class="block py-2 text-gray-700 hover:text-purple-800">Portfolio</a>
+        <a href="pricing.html" class="block py-2 text-gray-700 hover:text-purple-800">Pricing</a>
+        <a href="blog/index.html" class="block py-2 text-gray-700 hover:text-purple-800">Blog</a>
+        <a href="book.html" class="block py-2 text-gray-700 hover:text-purple-800">Book a Call</a>
+        <a href="contact.html" class="block py-2 text-gray-700 hover:text-purple-800">Contact</a>
+    </div>
+</header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="gradient-bg text-white py-20 md:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-300 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center gap-3 bg-white/20 px-6 py-2 rounded-full mb-6 backdrop-blur-sm">
+                <span class="text-sm font-semibold uppercase tracking-wider">✨ Let's Connect</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Get In Touch</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Ready to transform your brand? We're just one message away.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- ========== اطلاعات تماس ========== -->
+                    <div>
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-xl">
+                            <h2 class="text-2xl font-bold mb-8 gradient-text">Contact Information</h2>
+                            
+                            <div class="space-y-6">
+                                <!-- ایمیل -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-700 mb-1">Email</h3>
+                                        <a href="mailto:info@hamrava.com" class="text-purple-700 hover:underline text-lg">info@hamrava.com</a>
+                                        <p class="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- واتساپ -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-700 mb-1">WhatsApp</h3>
+                                        <a href="https://wa.me/989981384095" class="text-purple-700 hover:underline text-lg">+98 998 138 4095</a>
+                                        <p class="text-sm text-gray-500 mt-1">Quick response on WhatsApp</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- زمان پاسخگویی -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-700 mb-1">Working Hours</h3>
+                                        <p class="text-gray-700">Monday - Friday: 9AM - 6PM</p>
+                                        <p class="text-gray-500 text-sm">Weekend: By appointment only</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- لوکیشن -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-700 mb-1">Location</h3>
+                                        <p class="text-gray-700">Digital Studio Serving Clients Worldwide</p>
+                                        <p class="text-gray-500 text-sm">Remote team, global reach</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- شبکه‌های اجتماعی -->
+                            <div class="mt-10">
+                                <h3 class="font-semibold text-gray-700 mb-4">Follow Us</h3>
+                                <div class="flex gap-4">
+                                    <a href="https://www.instagram.com/hamrava_agency/" class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl hover:scale-110 transition shadow-lg">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl hover:scale-110 transition shadow-lg">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl hover:scale-110 transition shadow-lg">
+                                        <i class="fab fa-behance"></i>
+                                    </a>
+                                    <a href="#" class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-white text-xl hover:scale-110 transition shadow-lg">
+                                        <i class="fab fa-pinterest"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== فرم تماس ========== -->
+                    <div>
+                        <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                            <h2 class="text-2xl font-bold mb-6 gradient-text">Send Us a Message</h2>
+                            
+                            <form action="https://formspree.io/f/xpqjrbgy" method="POST" class="space-y-6">
+                                <!-- فیلد مخفی برای موضوع -->
+                                <input type="hidden" name="_subject" value="New Message from Hamrava Website">
+                                <!-- فیلد مخفی ضد اسپم -->
+                                <input type="text" name="_gotcha" style="display:none">
+                                
+                                <!-- نام -->
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Full Name <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text" id="name" name="name" required 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                                        placeholder="John Doe">
+                                </div>
+                                
+                                <!-- ایمیل -->
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Email Address <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" required 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                                        placeholder="john@example.com">
+                                </div>
+                                
+                                <!-- شماره تماس (اختیاری) -->
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Phone Number <span class="text-gray-400 text-xs">(optional)</span>
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                                        placeholder="+1 234 567 890">
+                                </div>
+                                
+                                <!-- سرویس مورد نظر -->
+                                <div>
+                                    <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Service Interested In
+                                    </label>
+                                    <select id="service" name="service" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition">
+                                        <option value="">Select a service</option>
+                                        <option value="Social Media Graphic Design">Social Media Graphic Design</option>
+                                        <option value="Instagram Story Templates">Instagram Story Templates</option>
+                                        <option value="Highlight Covers & Icons">Highlight Covers & Icons</option>
+                                        <option value="Post Layouts & Grid Design">Post Layouts & Grid Design</option>
+                                        <option value="Content Calendar">Content Calendar</option>
+                                        <option value="Brand Identity Package">Brand Identity Package</option>
+                                        <option value="Full Social Media Management">Full Social Media Management</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- پیام -->
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Your Message <span class="text-red-500">*</span>
+                                    </label>
+                                    <textarea id="message" name="message" rows="5" required 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                                        placeholder="Tell us about your project, goals, or any questions you have..."></textarea>
+                                </div>
+                                
+                                <!-- دکمه ارسال -->
+                                <button type="submit" 
+                                    class="w-full gradient-bg text-white font-bold py-4 rounded-lg hover:opacity-90 transition transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-lg">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                                
+                                <p class="text-xs text-gray-500 text-center mt-4">
+                                    ✨ We'll get back to you within 24 hours. Your information is safe with us.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- باکس اعتماد -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="font-semibold mb-1">Fast Response</h3>
+                        <p class="text-sm text-gray-500">Within 24 hours</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="font-semibold mb-1">100% Confidential</h3>
+                        <p class="text-sm text-gray-500">Your privacy matters</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="font-semibold mb-1">Free Consultation</h3>
+                        <p class="text-sm text-gray-500">No obligation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prefer to Book a Call Instead?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                Schedule a free 30-minute strategy session with our team.
+            </p>
+            <a href="book.html" class="bg-white text-purple-900 font-bold px-8 py-4 rounded-full hover:shadow-2xl transition transform hover:scale-105 inline-flex items-center gap-2">
+                <i class="fas fa-calendar-check"></i>
+                Book Your Free Call
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+                        <span class="text-xl font-bold gradient-text">Hamrava</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Boutique social media management and digital branding studio helping brands create unforgettable digital presences.</p>
+                    <p class="text-sm text-gray-500">© 2023 Hamrava. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="book.html" class="text-gray-400 hover:text-white transition">Book a Call</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/hamrava_agency/" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>Hamrava - Shape Your Digital Aura</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // منوی موبایل
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                const icon = menuToggle.querySelector('i');
+                
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    icon.className = mobileMenu.classList.contains('hidden') 
+                        ? 'fas fa-bars text-2xl' 
+                        : 'fas fa-times text-2xl';
+                });
+                
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        icon.className = 'fas fa-bars text-2xl';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
