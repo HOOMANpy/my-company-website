@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Hamrava | Boutique Social Media & Branding Studio</title>
+    <meta name="description" content="Learn about Hamrava's mission, values, and the team behind your brand's digital transformation. We're a boutique social media agency dedicated to authentic storytelling." />
+    <link rel="icon" type="image/x-icon" href="images/hamrava_logo.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+        body { font-family: "Poppins", sans-serif; background-color: #f5f5f5; }
+        .gradient-text {
+            background: linear-gradient(90deg, #5a189a 0%, #c77dff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #5a189a 0%, #c77dff 100%);
+        }
+        @keyframes blob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-blob { animation: blob 15s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- ==================== HEADER (کپی از index.html) ==================== -->
+    <!-- ==================== HEADER نهایی برای همه صفحات ==================== -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- لوگو -->
+        <div class="flex items-center">
+            <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+            <a href="index.html" class="text-xl font-bold gradient-text">Hamrava</a>
+        </div>
+
+        <!-- منوی دسکتاپ - با تمام لینک‌ها -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Home</a>
+            <a href="about.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">About</a>
+            <a href="services.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Services</a>
+            <a href="portfolio.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Portfolio</a>
+            <a href="pricing.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Pricing</a>
+            <a href="blog/index.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Blog</a>
+            <a href="book.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Book a Call</a>
+            <a href="contact.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Contact</a>
+        </nav>
+
+        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- منوی موبایل - با تمام لینک‌ها -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white w-full px-4 pb-4 shadow-lg">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-800">Home</a>
+        <a href="about.html" class="block py-2 text-gray-700 hover:text-purple-800">About</a>
+        <a href="services.html" class="block py-2 text-gray-700 hover:text-purple-800">Services</a>
+        <a href="portfolio.html" class="block py-2 text-gray-700 hover:text-purple-800">Portfolio</a>
+        <a href="pricing.html" class="block py-2 text-gray-700 hover:text-purple-800">Pricing</a>
+        <a href="blog/index.html" class="block py-2 text-gray-700 hover:text-purple-800">Blog</a>
+        <a href="book.html" class="block py-2 text-gray-700 hover:text-purple-800">Book a Call</a>
+        <a href="contact.html" class="block py-2 text-gray-700 hover:text-purple-800">Contact</a>
+    </div>
+</header>
+
+    <!-- ==================== HERO SECTION (مخصوص صفحه About) ==================== -->
+    <section class="gradient-bg text-white py-20 md:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-300 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Story</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                We're on a mission to help brands find their authentic voice in the digital world.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== OUR MISSION ==================== -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="text-sm font-semibold text-purple-800 uppercase tracking-wider inline-block bg-purple-100 px-4 py-1 rounded-full mb-6">
+                    ✦ Our Philosophy ✦
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 gradient-text">More Than Just Social Media</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-12">
+                    At Hamrava, we believe that every brand has a unique story waiting to be told. 
+                    We're not just another social media agency — we're your creative partner in crafting 
+                    digital experiences that resonate, connect, and convert.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div class="text-center">
+                        <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">🎯</div>
+                        <h3 class="text-xl font-bold mb-2">Purpose-Driven</h3>
+                        <p class="text-gray-600">Every design decision serves a strategic purpose</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">✨</div>
+                        <h3 class="text-xl font-bold mb-2">Authentically Creative</h3>
+                        <p class="text-gray-600">No templates, no shortcuts — just pure creativity</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">🤝</div>
+                        <h3 class="text-xl font-bold mb-2">Results-Oriented</h3>
+                        <p class="text-gray-600">Your success is the only metric that matters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OUR STORY (تاریخچه) ==================== -->
+    <section class="py-20 md:py-28 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-sm font-semibold text-purple-800 uppercase tracking-wider inline-block bg-purple-100 px-4 py-1 rounded-full mb-6">
+                        ✦ How It All Began ✦
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text">The Hamrava Story</h2>
+                </div>
+                
+                <div class="space-y-8 text-gray-700 text-lg leading-relaxed">
+                    <p>
+                        <span class="font-bold text-purple-800 text-xl">Hamrava</span> was born from a simple observation: 
+                        in a world saturated with content, most brands struggle to stand out. We saw countless businesses 
+                        with amazing products and services, but their digital presence didn't reflect their true potential.
+                    </p>
+                    <p>
+                        Founded in 2023, we started as a small team of designers and strategists who shared a common belief — 
+                        that authentic storytelling and intentional design can transform how brands connect with their audience. 
+                        We named ourselves "Hamrava" (همراه), meaning "companion" in Persian, because we wanted to be more 
+                        than just a service provider. We wanted to walk alongside our clients on their journey to success.
+                    </p>
+                    <p>
+                        Today, we've grown into a boutique studio serving clients across the globe, from tech startups in 
+                        Silicon Valley to lifestyle brands in Southeast Asia. But our core philosophy remains the same: 
+                        every brand deserves a digital presence that's as unique as its story.
+                    </p>
+                </div>
+                
+                <!-- آمار -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                    <div class="text-center bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="text-3xl font-bold gradient-text">50+</div>
+                        <div class="text-sm text-gray-600">Happy Clients</div>
+                    </div>
+                    <div class="text-center bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="text-3xl font-bold gradient-text">300+</div>
+                        <div class="text-sm text-gray-600">Campaigns</div>
+                    </div>
+                    <div class="text-center bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="text-3xl font-bold gradient-text">8</div>
+                        <div class="text-sm text-gray-600">Countries</div>
+                    </div>
+                    <div class="text-center bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="text-3xl font-bold gradient-text">4.9</div>
+                        <div class="text-sm text-gray-600">Client Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TEAM SECTION ==================== -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-semibold text-purple-800 uppercase tracking-wider inline-block bg-purple-100 px-4 py-1 rounded-full mb-6">
+                    ✦ The Creative Minds ✦
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Meet the Team</h2>
+                <p class="text-lg text-gray-600">
+                    A passionate group of designers, strategists, and storytellers dedicated to your success.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- عضو تیم ۱ -->
+                <div class="group text-center">
+                    <div class="relative mb-6 inline-block">
+                        <div class="w-40 h-40 rounded-full gradient-bg p-1 mx-auto">
+                            <div class="w-full h-full rounded-full bg-white overflow-hidden border-4 border-white">
+                                <img src="images/team1.jpg" alt="Sara Mohammadi" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150'">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white border-4 border-white">
+                            <i class="fas fa-paint-brush text-sm"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Sara Mohammadi</h3>
+                    <p class="text-purple-700 font-medium mb-3">Creative Director</p>
+                    <p class="text-sm text-gray-500 max-w-xs mx-auto">8+ years transforming brands through design</p>
+                </div>
+                
+                <!-- عضو تیم ۲ -->
+                <div class="group text-center">
+                    <div class="relative mb-6 inline-block">
+                        <div class="w-40 h-40 rounded-full gradient-bg p-1 mx-auto">
+                            <div class="w-full h-full rounded-full bg-white overflow-hidden border-4 border-white">
+                                <img src="images/team2.jpg" alt="Ali Rezaei" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150'">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white border-4 border-white">
+                            <i class="fas fa-chart-line text-sm"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Ali Rezaei</h3>
+                    <p class="text-purple-700 font-medium mb-3">Strategy Lead</p>
+                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Data-driven marketing specialist</p>
+                </div>
+                
+                <!-- عضو تیم ۳ -->
+                <div class="group text-center">
+                    <div class="relative mb-6 inline-block">
+                        <div class="w-40 h-40 rounded-full gradient-bg p-1 mx-auto">
+                            <div class="w-full h-full rounded-full bg-white overflow-hidden border-4 border-white">
+                                <img src="images/team3.jpg" alt="Nadia Karimi" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150'">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white border-4 border-white">
+                            <i class="fas fa-camera text-sm"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Nadia Karimi</h3>
+                    <p class="text-purple-700 font-medium mb-3">Content Creator</p>
+                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Visual storytelling expert</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-500">... and a growing team of creative professionals</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VALUES SECTION ==================== -->
+    <section class="py-20 md:py-28 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-semibold text-purple-800 uppercase tracking-wider inline-block bg-purple-100 px-4 py-1 rounded-full mb-6">
+                    ✦ What We Stand For ✦
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Our Core Values</h2>
+                <p class="text-lg text-gray-600">
+                    The principles that guide everything we do.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center text-white text-2xl mb-6">✨</div>
+                    <h3 class="text-xl font-bold mb-3">Authenticity</h3>
+                    <p class="text-gray-600">We never use templates. Every brand deserves a unique visual identity.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center text-white text-2xl mb-6">📊</div>
+                    <h3 class="text-xl font-bold mb-3">Transparency</h3>
+                    <p class="text-gray-600">Monthly reports, clear communication, no hidden agendas.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center text-white text-2xl mb-6">🤝</div>
+                    <h3 class="text-xl font-bold mb-3">Partnership</h3>
+                    <p class="text-gray-600">We grow with you. Your success is our success.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center text-white text-2xl mb-6">🚀</div>
+                    <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                    <p class="text-gray-600">Always learning, always evolving with the latest trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Brand?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                Let's create something remarkable together.
+            </p>
+            <a href="contact.html" class="bg-white text-purple-900 font-bold px-8 py-4 rounded-full hover:shadow-2xl transition inline-flex items-center gap-3 group">
+                <span>Start Your Journey</span>
+                <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER (کپی از index.html) ==================== -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+                        <span class="text-xl font-bold gradient-text">Hamrava</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Boutique social media management and digital branding studio helping brands create unforgettable digital presences.</p>
+                    <p class="text-sm text-gray-500">© 2023 Hamrava. All rights reserved.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/hamrava_agency/" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>Hamrava - Shape Your Digital Aura</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPT (کپی از index.html با تنظیم منو) ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // منوی موبایل
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                const icon = menuToggle.querySelector('i');
+                
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    icon.className = mobileMenu.classList.contains('hidden') 
+                        ? 'fas fa-bars text-2xl' 
+                        : 'fas fa-times text-2xl';
+                });
+                
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        icon.className = 'fas fa-bars text-2xl';
+                    });
+                });
+            }
+            
+            // اسکرول صاف (برای لینک‌های داخلی)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
