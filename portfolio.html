@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Portfolio | Hamrava Social Media & Branding Studio</title>
+    <meta name="description" content="Explore our successful projects across various industries: solar energy, food & beverage, real estate, beauty, tech, and more. See how we transform brands." />
+    <link rel="icon" type="image/x-icon" href="images/hamrava_logo.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+        
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #5a189a 0%, #c77dff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #5a189a 0%, #c77dff 100%);
+        }
+
+        .portfolio-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 40px -20px rgba(90, 24, 154, 0.3);
+        }
+
+        @keyframes blob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-blob {
+            animation: blob 15s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- ==================== HEADER ==================== -->
+    <!-- ==================== HEADER نهایی برای همه صفحات ==================== -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- لوگو -->
+        <div class="flex items-center">
+            <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+            <a href="index.html" class="text-xl font-bold gradient-text">Hamrava</a>
+        </div>
+
+        <!-- منوی دسکتاپ - با تمام لینک‌ها -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Home</a>
+            <a href="about.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">About</a>
+            <a href="services.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Services</a>
+            <a href="portfolio.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Portfolio</a>
+            <a href="pricing.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Pricing</a>
+            <a href="blog/index.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Blog</a>
+            <a href="book.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Book a Call</a>
+            <a href="contact.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Contact</a>
+        </nav>
+
+        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- منوی موبایل - با تمام لینک‌ها -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white w-full px-4 pb-4 shadow-lg">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-800">Home</a>
+        <a href="about.html" class="block py-2 text-gray-700 hover:text-purple-800">About</a>
+        <a href="services.html" class="block py-2 text-gray-700 hover:text-purple-800">Services</a>
+        <a href="portfolio.html" class="block py-2 text-gray-700 hover:text-purple-800">Portfolio</a>
+        <a href="pricing.html" class="block py-2 text-gray-700 hover:text-purple-800">Pricing</a>
+        <a href="blog/index.html" class="block py-2 text-gray-700 hover:text-purple-800">Blog</a>
+        <a href="book.html" class="block py-2 text-gray-700 hover:text-purple-800">Book a Call</a>
+        <a href="contact.html" class="block py-2 text-gray-700 hover:text-purple-800">Contact</a>
+    </div>
+</header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="gradient-bg text-white py-20 md:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-300 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center gap-3 bg-white/20 px-6 py-2 rounded-full mb-6 backdrop-blur-sm">
+                <span class="text-sm font-semibold uppercase tracking-wider">✨ Our Success Stories</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Featured Case Studies</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Real results for real brands across industries. See how we've transformed businesses through creative design and strategy.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#portfolio-grid" class="bg-white text-purple-900 font-bold px-8 py-3 rounded-full hover:shadow-xl transition transform hover:scale-105">
+                    View Projects
+                </a>
+                <a href="book.html" class="border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-purple-900 transition">
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTRO ==================== -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <span class="text-sm font-semibold text-purple-800 uppercase tracking-wider inline-block bg-purple-100 px-4 py-1 rounded-full mb-6">
+                ✦ Our Work ✦
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+                Transforming Brands, One Project at a Time
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                From solar energy companies to beauty salons, we've helped businesses across industries create stunning digital presences that drive real results.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== FILTER (اختیاری - در صورت تمایل فعال کنید) ==================== 
+    <section class="py-8 bg-white border-t border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-purple-600 text-white font-semibold text-sm">All</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">Solar Energy</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">Food & Beverage</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">Real Estate</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">Restaurant</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">Beauty</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">Tech</button>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- ==================== PORTFOLIO GRID ==================== -->
+    <section id="portfolio-grid" class="py-16 md:py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- ========== پروژه ۱: Uwana Solar ========== -->
+                <div class="portfolio-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="uwana/uwana_main.jpg" alt="Uwana Solar project" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <span class="text-xs font-semibold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block">Solar Energy</span>
+                                <h3 class="text-2xl font-bold">Uwana Solar</h3>
+                            </div>
+                        </div>
+                        <!-- برچسب -->
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                            Featured
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Uwana Solar</h3>
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Solar Energy</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Brand identity and social media design for a forward-thinking solar energy company.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <i class="fas fa-chart-line text-green-500"></i>
+                                <span>+156% engagement</span>
+                            </div>
+                            <a href="portfolio/uwana-solar.html" class="inline-flex items-center gap-2 text-purple-700 font-semibold hover:gap-3 transition-all">
+                                View Case Study <i class="fas fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== پروژه ۲: Frosty Cream ========== -->
+                <div class="portfolio-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="frosty_cream/frosty_main.jpg" alt="Frosty Cream project" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <span class="text-xs font-semibold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block">Food & Beverage</span>
+                                <h3 class="text-2xl font-bold">Frosty Cream</h3>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Frosty Cream</h3>
+                            <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded-full">Food & Beverage</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Instagram strategy and visual identity for a boutique ice cream and dessert shop.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <i class="fas fa-heart text-red-500"></i>
+                                <span>+200% followers</span>
+                            </div>
+                            <a href="portfolio/frosty-cream.html" class="inline-flex items-center gap-2 text-purple-700 font-semibold hover:gap-3 transition-all">
+                                View Case Study <i class="fas fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== پروژه ۳: Tofam Realty ========== -->
+                <div class="portfolio-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="tofam_reality/tofam_main.jpg" alt="Tofam Realty project" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <span class="text-xs font-semibold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block">Real Estate</span>
+                                <h3 class="text-2xl font-bold">Tofam Realty</h3>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                            Luxury
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Tofam Realty</h3>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Real Estate</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Luxury property marketing and social media design for a premier real estate agency.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <i class="fas fa-tag text-purple-500"></i>
+                                <span>23 properties sold</span>
+                            </div>
+                            <a href="portfolio/tofam-realty.html" class="inline-flex items-center gap-2 text-purple-700 font-semibold hover:gap-3 transition-all">
+                                View Case Study <i class="fas fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== پروژه ۴: Farouj Al Shams ========== -->
+                <div class="portfolio-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="farouj%20al%20shams/farouj_main.jpg" alt="Farouj Al Shams project" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <span class="text-xs font-semibold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block">Restaurant</span>
+                                <h3 class="text-2xl font-bold">Farouj Al Shams</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Farouj Al Shams</h3>
+                            <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full">Restaurant</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Instagram story templates and branding for a popular restaurant.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <i class="fas fa-eye text-blue-500"></i>
+                                <span>50K+ reach</span>
+                            </div>
+                            <a href="portfolio/farouj-al-shams.html" class="inline-flex items-center gap-2 text-purple-700 font-semibold hover:gap-3 transition-all">
+                                View Case Study <i class="fas fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== پروژه ۵: Toni & Guy Aundh ========== -->
+                <div class="portfolio-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="beauty/beauty_main.jpg" alt="Toni & Guy Aundh project" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <span class="text-xs font-semibold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block">Beauty</span>
+                                <h3 class="text-2xl font-bold">Toni & Guy Aundh</h3>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                            Premium
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Toni & Guy Aundh</h3>
+                            <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded-full">Beauty</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Brand identity, print design, and social media for a premium beauty salon.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <i class="fas fa-star text-yellow-500"></i>
+                                <span>4.9 rating</span>
+                            </div>
+                            <a href="portfolio/toni-guy.html" class="inline-flex items-center gap-2 text-purple-700 font-semibold hover:gap-3 transition-all">
+                                View Case Study <i class="fas fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== پروژه ۶: JCgets Store ========== -->
+                <div class="portfolio-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="jcgets_store/cjget_main.jpg" alt="JCgets Store project" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <span class="text-xs font-semibold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block">Tech</span>
+                                <h3 class="text-2xl font-bold">JCgets Store</h3>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                            Trending
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">JCgets Store</h3>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Tech</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Product photography and social media design for a gadget retailer.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <i class="fas fa-shopping-cart text-green-500"></i>
+                                <span>2x sales</span>
+                            </div>
+                            <a href="portfolio/jcgets.html" class="inline-flex items-center gap-2 text-purple-700 font-semibold hover:gap-3 transition-all">
+                                View Case Study <i class="fas fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA پایین -->
+            <div class="text-center mt-16">
+                <p class="text-gray-600 mb-6">Inspired by what you see? Let's create something amazing for your brand.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="book.html" class="gradient-bg text-white font-bold px-10 py-4 rounded-full hover:shadow-xl transition transform hover:scale-105 inline-flex items-center gap-3 text-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Free Consultation
+                    </a>
+                    <a href="services.html" class="border-2 border-purple-600 text-purple-700 font-bold px-10 py-4 rounded-full hover:bg-purple-50 transition">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== آمار ========== -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">50+</div>
+                    <div class="text-sm text-gray-500">Happy Clients</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">6+</div>
+                    <div class="text-sm text-gray-500">Industries</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">300%</div>
+                    <div class="text-sm text-gray-500">Avg Engagement</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">4.9</div>
+                    <div class="text-sm text-gray-500">Client Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL ==================== -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <span class="text-sm font-semibold text-purple-800 uppercase tracking-wider inline-block bg-purple-100 px-4 py-1 rounded-full mb-6">
+                ✦ Client Love ✦
+            </span>
+            <div class="bg-white rounded-3xl p-8 shadow-xl">
+                <i class="fas fa-quote-left text-4xl text-purple-200 mb-4"></i>
+                <p class="text-xl text-gray-700 italic mb-6">
+                    "Hamrava transformed our brand's digital presence completely. Their creative approach and attention to detail is unmatched. Our engagement has skyrocketed since we started working with them."
+                </p>
+                <div class="flex items-center justify-center gap-4">
+                    <img src="images/james.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover border-2 border-purple-200">
+                    <div class="text-left">
+                        <h4 class="font-bold text-gray-800">James K.</h4>
+                        <p class="text-sm text-purple-600">CEO, Tech Startup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Be Our Next Success Story?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                Let's create something remarkable for your brand.
+            </p>
+            <a href="book.html" class="bg-white text-purple-900 font-bold px-8 py-4 rounded-full hover:shadow-2xl transition transform hover:scale-105 inline-flex items-center gap-2">
+                <i class="fas fa-calendar-check"></i>
+                Start Your Project
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+                        <span class="text-xl font-bold gradient-text">Hamrava</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Boutique social media management and digital branding studio helping brands create unforgettable digital presences.</p>
+                    <p class="text-sm text-gray-500">© 2023 Hamrava. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="book.html" class="text-gray-400 hover:text-white transition">Book a Call</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/hamrava_agency/" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>Hamrava - Shape Your Digital Aura</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // منوی موبایل
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                const icon = menuToggle.querySelector('i');
+                
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    icon.className = mobileMenu.classList.contains('hidden') 
+                        ? 'fas fa-bars text-2xl' 
+                        : 'fas fa-times text-2xl';
+                });
+                
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        icon.className = 'fas fa-bars text-2xl';
+                    });
+                });
+            }
+            
+            // ===== فیلتر (اگر فعال کردید) =====
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            if (filterBtns.length > 0) {
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        filterBtns.forEach(b => {
+                            b.classList.remove('bg-purple-600', 'text-white');
+                            b.classList.add('bg-gray-100', 'text-gray-700');
+                        });
+                        this.classList.remove('bg-gray-100', 'text-gray-700');
+                        this.classList.add('bg-purple-600', 'text-white');
+                        
+                        // اینجا می‌توانید منطق فیلتر را اضافه کنید
+                        const filter = this.textContent.trim();
+                        console.log('Filter by:', filter);
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
