@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Hamrava Social Media & Branding Studio</title>
+    <meta name="description" content="Expert insights on social media management, branding, Instagram tips, and digital marketing strategies. Learn from Hamrava's experience." />
+    <link rel="icon" type="image/x-icon" href="../images/hamrava_logo.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+        
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #5a189a 0%, #c77dff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #5a189a 0%, #c77dff 100%);
+        }
+
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(90, 24, 154, 0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- ==================== HEADER ==================== -->
+    <!-- ==================== HEADER برای صفحه Blog ==================== -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- لوگو (با لینک به صفحه اصلی) -->
+        <div class="flex items-center">
+            <img src="../images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+            <a href="../index.html" class="text-xl font-bold gradient-text">Hamrava</a>
+        </div>
+
+        <!-- منوی دسکتاپ - با لینک‌های صحیح برای داخل پوشه -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="../index.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Home</a>
+            <a href="../about.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">About</a>
+            <a href="../services.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Services</a>
+            <a href="../portfolio.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Portfolio</a>
+            <a href="../pricing.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Pricing</a>
+            <a href="index.html" class="nav-link font-medium text-purple-800 font-bold border-b-2 border-purple-800">Blog</a>
+            <a href="../book.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Book a Call</a>
+            <a href="../contact.html" class="nav-link font-medium text-gray-700 hover:text-purple-800 transition">Contact</a>
+        </nav>
+
+        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- منوی موبایل - با لینک‌های صحیح برای داخل پوشه -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white w-full px-4 pb-4 shadow-lg">
+        <a href="../index.html" class="block py-2 text-gray-700 hover:text-purple-800">Home</a>
+        <a href="../about.html" class="block py-2 text-gray-700 hover:text-purple-800">About</a>
+        <a href="../services.html" class="block py-2 text-gray-700 hover:text-purple-800">Services</a>
+        <a href="../portfolio.html" class="block py-2 text-gray-700 hover:text-purple-800">Portfolio</a>
+        <a href="../pricing.html" class="block py-2 text-gray-700 hover:text-purple-800">Pricing</a>
+        <a href="index.html" class="block py-2 text-purple-800 font-bold">Blog</a>
+        <a href="../book.html" class="block py-2 text-gray-700 hover:text-purple-800">Book a Call</a>
+        <a href="../contact.html" class="block py-2 text-gray-700 hover:text-purple-800">Contact</a>
+    </div>
+</header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="gradient-bg text-white py-20 md:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-300 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center gap-3 bg-white/20 px-6 py-2 rounded-full mb-6 backdrop-blur-sm">
+                <span class="text-sm font-semibold uppercase tracking-wider">📚 Insights & Resources</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">The Hamrava Blog</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Expert tips, industry insights, and strategies to grow your brand on social media.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== CATEGORIES ==================== -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-16 z-40 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#all" class="category-filter active px-6 py-2 rounded-full bg-purple-600 text-white font-semibold text-sm transition hover:scale-105">All Posts</a>
+                <a href="#instagram-tips" class="category-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">📸 Instagram Tips</a>
+                <a href="#branding" class="category-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">🎨 Branding</a>
+                <a href="#content-strategy" class="category-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">📊 Content Strategy</a>
+                <a href="#case-studies" class="category-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">📈 Case Studies</a>
+                <a href="#marketing-tips" class="category-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-purple-100 font-semibold text-sm transition">💡 Marketing Tips</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED POST ==================== -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-8 shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-purple-800 uppercase tracking-wider bg-white px-4 py-1 rounded-full inline-block mb-4">✨ Featured Post</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Social Media Management: 2026 Complete Guide for Business Growth</h2>
+                        <p class="text-gray-600 mb-6">Social media management is no longer just posting content. This guide explores strategy development, content calendars, performance tracking, pricing models, and the real responsibilities behind successful execution in 2026.</p>
+                        <div class="flex items-center gap-4 mb-6">
+                            
+                            <img src="authors/hooman hamrahi.jpg" alt="Hooman Hamrahi" class="w-12 h-12 rounded-full border-2 border-purple-200">
+                            <div>
+                                <p class="font-semibold">Hooman Hamrahi</p>
+                                <p class="text-sm text-gray-500">Social Media Strategist • 15 min read</p>
+                            </div>
+                        </div>
+                        
+                        <a href="social-media-management/" class="inline-flex items-center gap-2 gradient-bg text-white font-bold px-6 py-3 rounded-full hover:shadow-xl transition">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hidden md:block">
+                        <div class="hidden md:block">
+                            <div class="relative rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 p-10 shadow-2xl">
+                                
+                                <!-- subtle inner glow -->
+                                <div class="absolute inset-0 rounded-3xl ring-1 ring-white/10"></div>
+                        
+                                <img 
+                                    src="social-media-management/images/Featured Image - Copy.png" 
+                                    alt="Social Media Management Guide"
+                                    class="relative w-full h-full object-contain"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BLOG GRID ==================== -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- ===== مقاله ۱: Instagram Tips ===== -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-category="instagram-tips">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="coming soon.png" alt="Instagram tips" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">📸 Instagram Tips</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <span>March 15, 2024</span>
+                            <span>•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-700 transition">10 Instagram Story Ideas That Boost Engagement</h3>
+                        <p class="text-gray-600 text-sm mb-4">Creative story templates and ideas that actually get your audience to interact.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">By Sara Mohammadi</span>
+                            <a href="#" class="text-purple-700 font-semibold flex items-center gap-1 hover:gap-2 transition">
+                                Read <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== مقاله ۲: Branding ===== -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-category="branding">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="coming soon.png" alt="Branding guide" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">🎨 Branding</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <span>March 10, 2024</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-700 transition">How to Create a Brand Identity That Stands Out</h3>
+                        <p class="text-gray-600 text-sm mb-4">From logo design to color psychology, learn the elements of unforgettable branding.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">By Ali Rezaei</span>
+                            <a href="#" class="text-purple-700 font-semibold flex items-center gap-1 hover:gap-2 transition">
+                                Read <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== مقاله ۳: Content Strategy ===== -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-category="content-strategy">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="coming soon.png" alt="Content strategy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">📊 Content Strategy</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <span>March 5, 2024</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-700 transition">The Perfect Content Calendar: A Step-by-Step Guide</h3>
+                        <p class="text-gray-600 text-sm mb-4">Plan your social media content like a pro and never miss a posting day again.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">By Nadia Karimi</span>
+                            <a href="#" class="text-purple-700 font-semibold flex items-center gap-1 hover:gap-2 transition">
+                                Read <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== مقاله ۴: Case Study ===== -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-category="case-studies">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="coming soon.png" alt="Case study" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">📈 Case Study</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <span>Feb 28, 2024</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-700 transition">How We Helped a Fashion Brand Grow 300% in 3 Months</h3>
+                        <p class="text-gray-600 text-sm mb-4">A detailed breakdown of our strategy, execution, and results for a luxury fashion client.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">By Hamrava Team</span>
+                            <a href="#" class="text-purple-700 font-semibold flex items-center gap-1 hover:gap-2 transition">
+                                Read <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== مقاله ۵: Marketing Tips ===== -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-category="marketing-tips">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="coming soon.png" alt="Marketing tips" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">💡 Marketing Tips</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <span>Feb 20, 2024</span>
+                            <span>•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-700 transition">5 Social Media Trends to Watch in 2024</h3>
+                        <p class="text-gray-600 text-sm mb-4">Stay ahead of the curve with these emerging trends in social media marketing.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">By Sara Mohammadi</span>
+                            <a href="#" class="text-purple-700 font-semibold flex items-center gap-1 hover:gap-2 transition">
+                                Read <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== مقاله ۶: Instagram Tips ===== -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-category="instagram-tips">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="coming soon.png" alt="Instagram Reels" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">📸 Instagram Tips</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                            <span>Feb 15, 2024</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-700 transition">Instagram Reels: The Complete Guide for Brands</h3>
+                        <p class="text-gray-600 text-sm mb-4">How to create Reels that go viral and actually bring you customers.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">By Ali Rezaei</span>
+                            <a href="#" class="text-purple-700 font-semibold flex items-center gap-1 hover:gap-2 transition">
+                                Read <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12 gap-2">
+                <a href="#" class="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center">1</a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-purple-100 transition">2</a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-purple-100 transition">3</a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-purple-100 transition">...</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <div class="bg-white rounded-3xl p-8 shadow-xl">
+                <i class="fas fa-envelope-open-text text-4xl gradient-text mb-4"></i>
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Never Miss a Post</h2>
+                <p class="text-gray-600 mb-6">Subscribe to our newsletter and get the latest insights delivered to your inbox.</p>
+                <form action="https://formspree.io/f/xpqjrbgy" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" name="email" placeholder="Your email address" required 
+                        class="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-purple-500 outline-none">
+                    <button type="submit" class="gradient-bg text-white font-bold px-6 py-3 rounded-full hover:shadow-xl transition">
+                        Subscribe
+                    </button>
+                </form>
+                <p class="text-xs text-gray-400 mt-4">No spam. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/hamrava_logo.jpg" alt="Hamrava Logo" class="h-10 w-10 mr-3" />
+                        <span class="text-xl font-bold gradient-text">Hamrava</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Boutique social media management and digital branding studio helping brands create unforgettable digital presences.</p>
+                    <p class="text-sm text-gray-500">© 2023 Hamrava. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="../about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="../services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="../portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="../pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="../blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="../book.html" class="text-gray-400 hover:text-white transition">Book a Call</a></li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#instagram-tips" class="text-gray-400 hover:text-white transition">📸 Instagram Tips</a></li>
+                        <li><a href="#branding" class="text-gray-400 hover:text-white transition">🎨 Branding</a></li>
+                        <li><a href="#content-strategy" class="text-gray-400 hover:text-white transition">📊 Content Strategy</a></li>
+                        <li><a href="#case-studies" class="text-gray-400 hover:text-white transition">📈 Case Studies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // منوی موبایل
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                const icon = menuToggle.querySelector('i');
+                
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    icon.className = mobileMenu.classList.contains('hidden') 
+                        ? 'fas fa-bars text-2xl' 
+                        : 'fas fa-times text-2xl';
+                });
+                
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        icon.className = 'fas fa-bars text-2xl';
+                    });
+                });
+            }
+
+            // ===== فیلتر دسته‌بندی =====
+            const categoryLinks = document.querySelectorAll('.category-filter');
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // حذف کلاس active از همه
+                    categoryLinks.forEach(l => {
+                        l.classList.remove('bg-purple-600', 'text-white');
+                        l.classList.add('bg-gray-100', 'text-gray-700');
+                    });
+                    
+                    // اضافه کردن کلاس active به لینک کلیک شده
+                    this.classList.remove('bg-gray-100', 'text-gray-700');
+                    this.classList.add('bg-purple-600', 'text-white');
+                    
+                    // گرفتن دسته انتخاب شده
+                    const selectedCategory = this.getAttribute('href').replace('#', '');
+                    
+                    if (selectedCategory === 'all') {
+                        // نمایش همه مقالات
+                        blogCards.forEach(card => {
+                            card.style.display = 'block';
+                        });
+                    } else {
+                        // نمایش فقط مقالات دسته انتخاب شده
+                        blogCards.forEach(card => {
+                            if (card.dataset.category === selectedCategory) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
